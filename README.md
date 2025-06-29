@@ -52,6 +52,9 @@ Below, we map all figures with code to files. All other figures are cartoons dra
 **Sup. Fig. 9c:**  Disorders/conceptual_disorder_policy_IG_axis.py
 
 **Sup. Fig. 10c-e:**  Circuit_design/ACG_simulations_main_execution.py; this script imports Circuit_design/agents.py, Circuit_design/environment.py, Circuit_design/layers.py, and Circuit_design/plotting_functions.py
+
 **Sup. Fig. 11b:**  Circuit_design/striosome_dopamine_control.py
+
 **Sup. Fig. 12b,c:**  Circuit_design/d1_d2_both_necessary.py
+
 **Sup. Fig. 13b-f:**  Naturalistic_foraging/naturalistic_rodent_foraging.py
