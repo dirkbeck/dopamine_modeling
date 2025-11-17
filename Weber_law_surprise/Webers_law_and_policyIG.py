@@ -158,4 +158,4 @@ ax1.tick_params(axis='x', direction='out', length=4)
 
 plt.tight_layout()
 plt.savefig('early_episodes_surprise_policyIG.pdf', format='pdf')
-plt.show()
+plt.show() 
