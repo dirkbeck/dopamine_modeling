@@ -5,8 +5,8 @@ import pandas as pd
 import matplotlib as mpl
 mpl.rcParams['pdf.fonttype'] =42
 
-# data estimated from Fiorelli et al 2003 10.1126/science.1077349
-df = pd.read_excel('fiorelli_et_al_data_approximations.xlsx')
+# data estimated from Fiorillo et al 2003 10.1126/science.1077349
+df = pd.read_excel('fiorillo_et_al_data_approximations.xlsx')
 p = df['probability'].values
 da1A = df['change in dopamine, set 1 monkey A'].values
 da2A = df['change in dopamine, set 2 monkey A'].values
@@ -72,5 +72,6 @@ plt.tight_layout()
 
 plt.savefig('dopamine_analysis.pdf', format='pdf', dpi=300,
             bbox_inches='tight', facecolor='white', edgecolor='none')
+
 
 plt.show()
