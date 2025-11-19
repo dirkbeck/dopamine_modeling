@@ -1,60 +1,139 @@
-Code for a model of the striosome→dopamine→matrix circuit where dopamine encodes “policy-information-gain” (policy-IG), i.e. the reduction in policy entropy from max possible entropy. All code is written in python 3.13.
-Below, we map all figures with code to files. All other figures are cartoons drawn in Adobe Illustrator. We do not use any external data for the project.
+This repository contains all code required to reproduce the figures in “Prediction error correlates in the striosome-dopamine circuit emerge from information gain” (Beck & Friedman, in submission). All data is included as Excel files. No external downloads are needed. All figures other than those produced from the code here are schematic illustrations created in Adobe Illustrator.
 
-**Fig. 2d-g:** Associative_learning_correlations/associative_learning_RPE_pIG_correlation.py
+---
 
-**Fig. 3b,d,f:**  Associative_learning_correlations/associative_learning_RPE_pIG_large_cost_and_novelty.py
+## Installation
 
-**Fig. 3g:**  Associative_learning_correlations/theoretical_3D_curve.py
+1. Clone the repository and enter its folder:  
+   ```bash
+   git clone https://github.com/dirkbeck/dopamine_modeling.git
+   cd dopamine_modeling
+   ```
 
-**Fig. 4b,d:**  Ramping_and_state_value/basic_ramping_and_teleport.py
+2. (Recommended) Create and activate a Python virtual environment:  
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-**Fig. 4e,f:**  Ramping_and_state_value/probabilistic_task_ramping.py
+3. Install Python dependencies:  
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-**Fig. 5a:**  Action_initiation/policy_shift_action_initiation.py
+---
 
-**Fig. 5d:**  Action_initiation/hierarchical_melody_note_primative_simulation.py
+## Directory Structure & Script-Figure Map
 
-**Fig. 6a-c:**  Decision_making_biases/risk_impulsivity_and_conflict.py
+Below is a map from each subdirectory and script to the figure(s) it generates.
 
-**Fig. 6d:**  Decision_making_biases/risk_impulsivity_and_conflict.py/Ushapeperformance.py
+**Associative_learning_correlations**  
+- `associative_learning_RPE_pIG_correlation.py` → Figs 2d-g  
+- `associative_learning_RPE_pIG_large_cost_and_novelty.py` → Figs 3b, d, f  
+- `theoretical_3D_curve.py` → Fig 3g  
+- `theoretical_2D_curve.py` → Fig S3a  
+- `experimental_data_fit_Kutlu_et_al_utility.py` → Fig S3b  
+- `experimental_data_fit_Stauffer_et_al.py` → Fig S3c  
+- `novelty_colormap.py` → Fig S3d  
+- `foraging_with_large_costs_RPE_pIG_relationship.py` → Fig S3f  
+- `open_gym_comparison.py` → Figs S3g-i  
+- `experimental_data_fit_Kutlu_et_al_novelty.py` → Fig S3j  
+- `experimental_data_fit_Fiorillo_et_al.py` → Fig S3k  
 
-**Fig. 7f,g:**  Disorders/coupled_infoIG_RL_sim.py
+**Ramping_and_state_value**  
+- `basic_ramping_and_teleport.py` → Figs 4b, d  
+- `probabilistic_task_ramping.py` → Figs 4e, f  
+- `dopamine_and_state_value_correlation.py` → Fig S4  
 
-**Fig. 8b:**  Circuit_design/ACG_simulations_main_execution.py; this script imports Circuit_design/agents.py, Circuit_design/environment.py, Circuit_design/layers.py, and Circuit_design/plotting_functions.py
+**Action_initiation**  
+- `policy_shift_action_initiation.py` → Fig 5a  
+- `hierarchical_melody_note_primative_simulation.py` → Fig 5d  
+- `clusters_of_brackets.py` → Fig S7  
+- `sensivity_by_baseline_policy_IG.py` → Fig S8  
 
-**Fig. 8e:**  Circuit_design/striosome_dopamine_control.py
+**Decision_making_biases**  
+- `risk_impulsivity_and_conflict.py` → Figs 6a-c  
+- `Ushapeperformance.py` → Fig 6d  
+- `decision_making_manifold.py` → Fig S9  
 
-**Fig. 8g:**  Circuit_design/d1_d2_both_necessary.py
+**Disorders**  
+- `coupled_infoIG_RL_sim.py` → Figs 7g, h  
+- `conceptual_disorder_policy_IG_axis.py` → Fig S10  
 
-**Sup. Fig. 2a:**  Associative_learning_correlations/theoretical_2D_curve.py
+**Circuit_design**  
+- `ACG_simulations_main_execution.py` → Fig 8b, Figs S11c-e  
+  - Imports: `agents.py`, `environment.py`, `layers.py`, `plotting_functions.py`  
+- `striosome_dopamine_control.py` → Fig 8e, Fig S12b  
+- `d1_d2_both_necessary.py` → Fig 8g, Figs S13c-d  
+- `distribution_across_neurons.py` → Figs 8i-j  
+- `d1_d2_lead_to_dual_param_control.py` → Fig S13a  
+- `four_stream_policies_over_time.py` → Fig S14c  
 
-**Sup. Fig. 2b:**  Associative_learning_correlations/novelty_colormap.py
+**Naturalistic_foraging**  
+- `naturalistic_rodent_foraging.py` → Fig S15  
 
-**Sup. Fig. 2d:**  Associative_learning_correlations/novelty_colormap.foraging_with_large_costs_RPE_pIG_relationship.py
+**Multi_cue_learning**  
+- `chunking_vs_TD_learning_blocking_task.py` → Fig S5d  
+- `chunking_vs_TD_learning_two_cue_task.py` → Figs S5f, g, i, j  
 
-**Sup. Fig. 2e-g:**  Associative_learning_correlations/open_gym_comparison.py
+**Weber_law_surprise**  
+- `Webers_law_and_policyIG.py` → Figs S6b-c  
 
-**Sup. Fig. 3:**  Ramping_and_state_value/dopamine_and_state_value_correlation.py
+---
 
-**Sup. Fig. 4d:**  Multi_cue_learning/chunking_vs_TD_learning_blocking_task.py
+## Dependencies & Data Files
 
-**Sup. Fig. 4f,g,i,j:**  Multi_cue_learning/chunking_vs_TD_learning_two_cue_task.py
+Most scripts depend only on packages listed in `requirements.txt`. Two categories have extra dependencies:
 
-**Sup. Fig. 5:**  Action_initiation/clusters_of_brackets.py
+1. **Excel data files** (in `Associative_learning_correlations`):  
+   - `Kutlu_et_al_data_approximations.xlsx`  
+     • used by  
+       - `experimental_data_fit_Kutlu_et_al_utility.py` (Fig S3b)  
+       - `experimental_data_fit_Kutlu_et_al_novelty.py` (Fig S3j)  
+   - `Stauffer_et_al_data_approximations.xlsx`  
+     • used by  
+       - `experimental_data_fit_Stauffer_et_al.py` (Fig S3c)  
+   - `Fiorillo_et_al_data_approximations.xlsx`  
+     • used by  
+       - `experimental_data_fit_Fiorillo_et_al.py` (Fig S3k)  
 
-**Sup. Fig. 6:**  Action_initiation/sensivity_by_baseline_policy_IG.py
+2. **Local package imports** (in `Circuit_design`):  
+   - Scripts import modules from `Circuit_design/`:  
+     `agents.py`, `environment.py`, `layers.py`, `plotting_functions.py`  
 
-**Sup. Fig. 7:**  Decision_making_biases/decision_making_manifold.py
+All other scripts are self-contained and require no extra data or modules beyond `requirements.txt`.
 
-**Sup. Fig. 8d,e:**  Distribution_across_neurons/distribution_across_neurons.py
+---
 
-**Sup. Fig. 9c:**  Disorders/conceptual_disorder_policy_IG_axis.py
+## How to Run Every Script
 
-**Sup. Fig. 10c-e:**  Circuit_design/ACG_simulations_main_execution.py; this script imports Circuit_design/agents.py, Circuit_design/environment.py, Circuit_design/layers.py, and Circuit_design/plotting_functions.py
+From the repository root, execute:
 
-**Sup. Fig. 11b:**  Circuit_design/striosome_dopamine_control.py
+```bash
+python path/to/subdirectory/script_name.py
+```
 
-**Sup. Fig. 12b,c:**  Circuit_design/d1_d2_both_necessary.py
+Below are special instructions for scripts with extra dependencies:
 
-**Sup. Fig. 13b-f:**  Naturalistic_foraging/naturalistic_rodent_foraging.py
+1. Experimental‐data scripts (require Excel files):  
+   ```bash
+   python Associative_learning_correlations/experimental_data_fit_Kutlu_et_al_utility.py
+   python Associative_learning_correlations/experimental_data_fit_Kutlu_et_al_novelty.py
+   python Associative_learning_correlations/experimental_data_fit_Stauffer_et_al.py
+   python Associative_learning_correlations/experimental_data_fit_Fiorelli_et_al.py
+   ```
+
+2. Main Circuit_design simulation (imports local modules):  
+   ```bash
+   python Circuit_design/ACG_simulations_main_execution.py
+   ```
+
+3. All other scripts (including the rest of Circuit_design):  
+   ```bash
+   python <other_subdirectory>/<script>.py
+   ```
+---
+
+## Contact
+
+For questions or issues, please email **dirkwadebeck@gmail.com**
