@@ -86,20 +86,16 @@ Below is a map from each subdirectory and script to the figure(s) it generates.
 Most scripts depend only on packages listed in `requirements.txt`. Two categories have extra dependencies:
 
 1. **Excel data files** (in `Associative_learning_correlations`):  
-   - `Kutlu_et_al_data_approximations.xlsx`  
-     • used by  
+   - `Kutlu_et_al_data_approximations.xlsx` used by  
        - `experimental_data_fit_Kutlu_et_al_utility.py` (Fig S3b)  
        - `experimental_data_fit_Kutlu_et_al_novelty.py` (Fig S3j)  
-   - `Stauffer_et_al_data_approximations.xlsx`  
-     • used by  
+   - `Stauffer_et_al_data_approximations.xlsx` used by  
        - `experimental_data_fit_Stauffer_et_al.py` (Fig S3c)  
-   - `Fiorillo_et_al_data_approximations.xlsx`  
-     • used by  
+   - `Fiorillo_et_al_data_approximations.xlsx` used by  
        - `experimental_data_fit_Fiorillo_et_al.py` (Fig S3k)  
 
 2. **Local package imports** (in `Circuit_design`):  
-   - Scripts import modules from `Circuit_design/`:  
-     `agents.py`, `environment.py`, `layers.py`, `plotting_functions.py`  
+   - Scripts import modules from `Circuit_design/`: `agents.py`, `environment.py`, `layers.py`, `plotting_functions.py`  
 
 All other scripts are self-contained and require no extra data or modules beyond `requirements.txt`.
 
