@@ -116,7 +116,7 @@ Below are special instructions for scripts with extra dependencies:
    python Associative_learning_correlations/experimental_data_fit_Kutlu_et_al_utility.py
    python Associative_learning_correlations/experimental_data_fit_Kutlu_et_al_novelty.py
    python Associative_learning_correlations/experimental_data_fit_Stauffer_et_al.py
-   python Associative_learning_correlations/experimental_data_fit_Fiorelli_et_al.py
+   python Associative_learning_correlations/experimental_data_fit_Fiorillo_et_al.py
    ```
 
 2. Main Circuit_design simulation (imports local modules):  
