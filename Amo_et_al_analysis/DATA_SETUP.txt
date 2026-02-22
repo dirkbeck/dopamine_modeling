@@ -1,0 +1,22 @@
+DATA SETUP
+==========
+This folder contains analysis scripts for data from the following dataset:
+
+    Amo, R., et al. (2022). Data from: The role of the lateral habenula in
+    punishment learning. Dryad. https://doi.org/10.5061/dryad.hhmgqnkjw
+
+HOW TO GET THE DATA
+-------------------
+The data are publicly available on Dryad:
+
+    https://datadryad.org/dataset/doi:10.5061/dryad.hhmgqnkjw
+
+Click "Download full dataset", unzip the downloaded archive, and place the
+resulting folder in this directory under the following name:
+
+    doi_10_5061_dryad_hhmgqnkjw__v20220602/
+
+The script expects to find the file Amo_ExtractedPeaks.mat inside that folder.
+
+If you use these scripts or the underlying data in your own work, please cite
+the original dataset. Data accessed from Dryad on 2025-02-22.
