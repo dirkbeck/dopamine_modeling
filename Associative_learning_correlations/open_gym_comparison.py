@@ -32,7 +32,7 @@ plt.rcParams.update({
 })
 
 # envs to test
-env_names = ["Taxi-v3", "CliffWalking-v0", "FrozenLake-v1"]
+env_names = ["Taxi-v3", "CliffWalking-v1", "FrozenLake-v1"]
 
 def run_env(env_name):
     env = gym.make(env_name, is_slippery=True) if "FrozenLake" in env_name else gym.make(env_name)
@@ -68,12 +68,11 @@ for env_name in env_names:
     short = env_name.split('-')[0].lower()
     all_data[short] = run_env(env_name)
 
-# make plots - longer and shorter figure with minimal padding
 fig, axes = plt.subplots(1, 3, figsize=(3.5, 1))
 
 # taxi plot
 data = all_data['taxi']
-axes[0].scatter(data["rpe"], data["policy_ig"], s=10, alpha=1.0, color='k', edgecolors='none', rasterized=True)
+axes[0].scatter(data["rpe"], data["policy_ig"], s=10, alpha=.5, color='k', edgecolors='none', rasterized=True)
 axes[0].set_title('taxi', fontsize=7)
 axes[0].set_xlabel("RPE", fontsize=6)
 axes[0].set_ylabel("Δ Policy-IG (nats)", fontsize=6)
@@ -85,7 +84,7 @@ axes[0].tick_params(labelsize=6)
 
 # cliff plot
 data = all_data['cliffwalking']
-axes[1].scatter(data["rpe"], data["policy_ig"], s=10, alpha=1.0, color='k', edgecolors='none', rasterized=True)
+axes[1].scatter(data["rpe"], data["policy_ig"], s=10, alpha=.5, color='k', edgecolors='none', rasterized=True)
 axes[1].set_title('cliffwalking', fontsize=7)
 axes[1].set_xlabel("RPE", fontsize=6)
 axes[1].axhline(0, color='grey', lw=0.5, alpha=1.0)
@@ -96,7 +95,7 @@ axes[1].tick_params(labelsize=6)
 
 # frozen lake plot
 data = all_data['frozenlake']
-axes[2].scatter(data["rpe"], data["policy_ig"], s=10, alpha=1.0, color='k', edgecolors='none', rasterized=True)
+axes[2].scatter(data["rpe"], data["policy_ig"], s=10, alpha=.5, color='k', edgecolors='none', rasterized=True)
 axes[2].set_title('frozenlake', fontsize=7)
 axes[2].set_xlabel("RPE", fontsize=6)
 axes[2].axhline(0, color='grey', lw=0.5, alpha=1.0)
