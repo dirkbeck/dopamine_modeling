@@ -38,10 +38,10 @@ Below is a map from each subdirectory and script to the figure(s) it generates.
 - `experimental_data_fit_Stauffer_et_al.py` → Fig S3c  
 - `eshel_et_al_fitting.py` → Fig S3d  
 - `novelty_colormap.py` → Fig S3e  
-- `foraging_with_large_costs_RPE_pIG_relationship.py` → Fig S3f  
-- `open_gym_comparison.py` → Figs S3g-i  
-- `experimental_data_fit_Kutlu_et_al_novelty.py` → Fig S3j  
-- `experimental_data_fit_Fiorillo_et_al.py` → Fig S3k  
+- `foraging_with_large_costs_RPE_pIG_relationship.py` → Fig S3g  
+- `open_gym_comparison.py` → Figs S3h-j  
+- `experimental_data_fit_Kutlu_et_al_novelty.py` → Fig S3k  
+- `experimental_data_fit_Fiorillo_et_al.py` → Fig S3l  
 
 **Ramping_and_state_value**  
 - `basic_ramping_and_teleport.py` → Figs 4b, d  
@@ -97,13 +97,13 @@ Most scripts depend only on packages listed in `requirements.txt`. Three categor
 1. **Excel data files** (in `Associative_learning_correlations`):  
    - `Kutlu_et_al_data_approximations.xlsx` used by  
        - `experimental_data_fit_Kutlu_et_al_utility.py` (Fig S3b)  
-       - `experimental_data_fit_Kutlu_et_al_novelty.py` (Fig S3j)  
+       - `experimental_data_fit_Kutlu_et_al_novelty.py` (Fig S3k)  
    - `Stauffer_et_al_data_approximations.xlsx` used by  
        - `experimental_data_fit_Stauffer_et_al.py` (Fig S3c)  
    - `Eshel_et_al_data_estimates.xlsx` used by  
        - `eshel_et_al_fitting.py` (Fig S3d)  
    - `Fiorillo_et_al_data_approximations.xlsx` used by  
-       - `experimental_data_fit_Fiorillo_et_al.py` (Fig S3k)  
+       - `experimental_data_fit_Fiorillo_et_al.py` (Fig S3l)  
 
 2. **External data downloads** (see DATA_SETUP.txt in each folder):  
    - `Harris_and_Gallistel_analysis/` requires `Acquisition_Table.xlsx` and `nHT.mat` from https://osf.io/vmwzr/  
