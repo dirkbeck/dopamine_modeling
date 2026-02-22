@@ -68,8 +68,9 @@ Below is a map from each subdirectory and script to the figure(s) it generates.
   - Imports: `agents.py`, `environment.py`, `layers.py`, `plotting_functions.py`  
 - `striosome_dopamine_control.py` → Fig 8e, Fig S14b  
 - `d1_d2_both_necessary.py` → Fig 8g, Figs S15c-d  
+- `d1_d2_lead_to_dual_param_control.py` → Fig S15a  
+- `four_stream_policies_over_time.py` → Fig S16c  
 - `distribution_across_neurons.py` → Figs 8i-j  
-- `d1_d2_lead_to_dual_param_control.py` → Fig S13a, Fig S16c  
 
 **Naturalistic_foraging**  
 - `naturalistic_rodent_foraging.py` → Fig S17  
