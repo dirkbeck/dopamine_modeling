@@ -1,0 +1,20 @@
+DATA SETUP
+==========
+This folder contains analysis scripts for data from the following paper:
+
+    Harris, J. A., & Gallistel, C. R. (2025). Information, certainty, and learning.
+    eLife. https://doi.org/10.7554/eLife.102155.3
+
+BEFORE RUNNING THE SCRIPTS, DOWNLOAD THE DATA
+----------------------------------------------
+The data is publicly available on the Open Science Framework (OSF):
+
+    https://osf.io/vmwzr/
+
+Download the following files and place them in this folder:
+
+    - Acquisition_Table.xlsx   (used by the Python script)
+    - nHT.mat                  (used by the MATLAB script)
+
+If you use these scripts or the underlying data in your own work, please cite
+the original Harris and Gallistel paper. Data accessed from OSF on 2025-02-22.
